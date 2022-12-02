@@ -75,3 +75,8 @@ https://www.npmjs.com/package/dotenv
 https://www.npmjs.com/package/bcrypt
 https://www.npmjs.com/package/express-session
 https://www.npmjs.com/package/connect-session-sequelize
+
+- installed express as a dependency (npm i express)
+- fix your path for const helpers on line 5 in server.js. This is how it should look. const helpers = require('./utils/helper');
+- in your index.js inside of controllers your homeRoutes require is off so it should be, const homeRoutes = require('./home-routes');
+- you'll also need to require router inside of your index.js using, const router = require('express').Router();
