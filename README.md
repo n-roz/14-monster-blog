@@ -4,6 +4,10 @@ Set up the project. You’ll build off of the previous project by creating new G
 Set up the template engine. You’ll install Handlebars and configure Express to use it as its template engine.
 Create the homepage template. You’ll create a Handlebars template for the homepage, populated with dummy data.
 Populate the template with Sequelize data. You’ll use a previously defined Sequelize query to populate the homepage with real data.
+Create a login page. Both login and sign-up sections will display at once.
+Add front-end logic to forms. We will add fetch requests to post to the server when a user logs in.
+Create a session on the back end. We will keep track of users' sessions so that we can associate them with posts.
+Add logic to destroy the session. The user will also be redirected upon logout.
 
 ## User Story
 ```
