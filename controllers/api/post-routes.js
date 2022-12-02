@@ -130,3 +130,10 @@ router.delete('/:id', withAuth, (req, res) => {
 });
 
 module.exports = router;
+
+// module 14.5.4
+// Post.create({
+//     title: req.body.title,
+//     post_url: req.body.post_url,
+//     user_id: req.session.user_id
+//   })

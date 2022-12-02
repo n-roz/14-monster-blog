@@ -19,6 +19,10 @@ Write and fulfill test for date formats. All dates will follow the MM/DD/YYYY fo
 Write and fulfill test for plural words. If there is one upvote or comment, then the word should be singular; otherwise, it should be plural.
 Write and fulfill a test for URL formats. Long URLs should be shortened.
 Add helper functions to Handlebar.js. We’ll need to tie all of the functions into the Handlebars.js engine.
+Create the dashboard template. You’ll set up a basic Handlebars.js template and route for a new dashboard page.
+Add data and logic to the dashboard. You’ll add Sequelize data and front-end JS logic to the dashboard page.
+Protect routes with middleware. You’ll write a custom middleware function to restrict certain routes to only logged-in users.
+Create an Edit Post page. You’ll create a dashboard template where users can edit and delete individual posts.
 
 ## User Story
 ```
