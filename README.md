@@ -8,6 +8,17 @@ Create a login page. Both login and sign-up sections will display at once.
 Add front-end logic to forms. We will add fetch requests to post to the server when a user logs in.
 Create a session on the back end. We will keep track of users' sessions so that we can associate them with posts.
 Add logic to destroy the session. The user will also be redirected upon logout.
+Create a single post template. You’ll create a new Handlebars.js template to render a single post and all of its corresponding data.
+Add upvote functionality. You’ll connect front-end and back-end logic to create a working upvote button.
+Add comment functionality. You’ll connect front-end and back-end logic to create a working comment form.
+Conditionally render the form elements. You’ll use Handlebars.js helpers to hide the form elements to users who aren’t logged in.
+Conditionally render the login links. You’ll use Handlebars.js helpers to change the navigation links that a user sees based on their logged-in status.
+Create a partial for post information. This will make the discussion around a post reusable.
+Create a partial for comments. This will make the comment section reusable.
+Write and fulfill test for date formats. All dates will follow the MM/DD/YYYY format.
+Write and fulfill test for plural words. If there is one upvote or comment, then the word should be singular; otherwise, it should be plural.
+Write and fulfill a test for URL formats. Long URLs should be shortened.
+Add helper functions to Handlebar.js. We’ll need to tie all of the functions into the Handlebars.js engine.
 
 ## User Story
 ```

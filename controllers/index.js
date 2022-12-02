@@ -1,3 +1,3 @@
-const homeRoutes = require('./home-routes.js');
+const homeRoutes = require('./api/home-routes.js');
 
 router.use('/', homeRoutes);
