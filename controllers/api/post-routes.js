@@ -3,6 +3,7 @@ const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// get all users
 router.get('/', withAuth, (req, res) => {
   Post.findAll({
     attributes: [
@@ -60,7 +61,7 @@ router.get('/:id', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this ID' });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(dbPostData);
@@ -71,6 +72,7 @@ router.get('/:id', withAuth, (req, res) => {
     });
 });
 
+// module 14.5.4
 router.post('/', withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
@@ -98,7 +100,7 @@ router.put('/:id', withAuth, (req, res) => {
   )
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this ID' });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(dbPostData);
@@ -118,7 +120,7 @@ router.delete('/:id', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this ID' });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(dbPostData);
@@ -130,10 +132,3 @@ router.delete('/:id', withAuth, (req, res) => {
 });
 
 module.exports = router;
-
-// module 14.5.4
-// Post.create({
-//     title: req.body.title,
-//     post_url: req.body.post_url,
-//     user_id: req.session.user_id
-//   })
