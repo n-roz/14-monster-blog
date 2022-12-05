@@ -1,6 +1,6 @@
 // module 14.5.4
 async function newFormHandler(event) {
-    event.prventDefault();
+    event.preventDefault();
 
     const title = document.querySelector('input[name="post-title"]').value;
     const post_text = document.querySelector('input[name="post-text"]').value;
