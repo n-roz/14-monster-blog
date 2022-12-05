@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class Post extends Model {}
@@ -20,6 +21,7 @@ Post.init(
           allowNull: false,
           validate: {
             len: [1]
+            //isURL: true
           }
         },
         user_id: {
