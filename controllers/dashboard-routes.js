@@ -6,6 +6,7 @@ const withAuth = require('../utils/auth');
 
 // 14.5.5
 router.get('/', withAuth, (req, res) => {
+  console.log("DB============= 1")
   Post.findAll({
     where: {
       user_id: req.session.user_id
@@ -42,6 +43,7 @@ router.get('/', withAuth, (req, res) => {
 });
 
 router.get('/edit/:id', withAuth, (req, res) => {
+  console.log("DB============= 2")
   Post.findByPk(req.params.id, {
     attributes: [
       'id',
