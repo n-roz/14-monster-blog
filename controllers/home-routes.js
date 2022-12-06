@@ -7,7 +7,7 @@ const { Post, User, Comment, Vote } = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
-  console.log('======================');
+  console.log("HR============= 1")
   Post.findAll({
     attributes: [
       'id',
@@ -46,6 +46,7 @@ router.get('/', (req, res) => {
 
 // get single post
 router.get('/post/:id', (req, res) => {
+  console.log("HR============= 2")
   Post.findOne({
     where: {
       id: req.params.id
@@ -91,6 +92,7 @@ router.get('/post/:id', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+  console.log("HR============= 3")
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
