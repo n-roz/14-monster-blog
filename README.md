@@ -87,6 +87,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ## Dependencies
 npm i express
+npm i express-session connect-session-sequelize
 https://www.npmjs.com/package/express-handlebars
 https://www.npmjs.com/package/mysql2
 https://sequelize.org/docs/v6/getting-started/
