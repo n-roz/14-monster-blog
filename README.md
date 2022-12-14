@@ -1,5 +1,21 @@
-# 14-monster-blog
+# Model-View-Controller (MVC) Challenge: Tech Blog
 
+```
+Your challenge this week is to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. You’ll build this site completely from scratch and deploy it to Heroku. Your app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+```
+
+
+```
+MVC is a popular software-design pattern that organizes your app into the three following separate concerns:
+
+Models: the core data of your app
+
+Views: the UI components, such as your HTML layouts
+
+Controllers: the link between your models and views
+```
+
+```
 Set up the project. You’ll build off of the previous project by creating new GitHub issues and adding a style sheet.
 Set up the template engine. You’ll install Handlebars and configure Express to use it as its template engine.
 Create the homepage template. You’ll create a Handlebars template for the homepage, populated with dummy data.
@@ -23,6 +39,7 @@ Create the dashboard template. You’ll set up a basic Handlebars.js template an
 Add data and logic to the dashboard. You’ll add Sequelize data and front-end JS logic to the dashboard page.
 Protect routes with middleware. You’ll write a custom middleware function to restrict certain routes to only logged-in users.
 Create an Edit Post page. You’ll create a dashboard template where users can edit and delete individual posts.
+```
 
 ## User Story
 ```
@@ -67,6 +84,7 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
+
 ## Dependencies
 npm i express
 https://www.npmjs.com/package/express-handlebars
