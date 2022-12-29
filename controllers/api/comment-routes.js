@@ -1,16 +1,22 @@
 const router = require('express').Router();
-const { response } = require('express');
-const { Comment } = require('../../models');
-// const withAuth = require('../../utils/auth');
+const { Comment, User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
-  Comment.findAll()
-    .then(dbCommentData => res.json(dbCommentData))
+  Comment.findAll({
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(commentData => res.json(commentData))
     .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+      console.log(err)
+      res.status(500).json(err)
+    })
+})
 
 // module 14.3.5
 router.post('/', (req, res) => {

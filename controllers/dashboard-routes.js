@@ -1,12 +1,10 @@
 // module 14.5.4
 const router = require('express').Router();
-const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // 14.5.5
 router.get('/', withAuth, (req, res) => {
-  console.log("DB============= 1")
   Post.findAll({
     where: {
       user_id: req.session.user_id
@@ -32,9 +30,9 @@ router.get('/', withAuth, (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('dashboard', { posts, loggedIn: true });
+    .then(postData => {
+      const posts = postData.map(post => post.get({ plain: true }));
+      res.render('dashboard', { posts, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
       console.log(err);
@@ -43,8 +41,10 @@ router.get('/', withAuth, (req, res) => {
 });
 
 router.get('/edit/:id', withAuth, (req, res) => {
-  console.log("DB============= 2")
-  Post.findByPk(req.params.id, {
+  Post.findOne({
+    where: {
+      id: req.params.id
+    },
     attributes: [
       'id',
       'content',
@@ -66,21 +66,18 @@ router.get('/edit/:id', withAuth, (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      if (dbPostData) {
-        const post = dbPostData.get({ plain: true });
-
-        res.render('edit-post', {
-          post,
-          loggedIn: true
-        });
-      } else {
-        res.status(404).end();
-      }
+    .then(postData => {
+      const post = postData.get({ plain: true })
+      res.render('edit-post', {
+        post,
+        loggedIn: req.session.loggedIn,
+      })
     })
     .catch(err => {
-      res.status(500).json(err);
-    });
-});
+      console.log(err)
+      res.status(500).json(err)
+    })
+})
+
 
 module.exports = router;

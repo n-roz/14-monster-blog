@@ -1,18 +1,14 @@
 // module 14.3.3
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-// const sequelize = require('../../config/connection');
-const { Post, User, Comment, Vote } = require('../models');
-// const { Post, User, Comment, Vote } = require('../../models');
+const { Post, User, Comment } = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
-  console.log("HR============= 1")
   Post.findAll({
     attributes: [
       'id',
-      'post_url',
       'title',
+      'content',
       'created_at'
     ],
     include: [
@@ -30,8 +26,8 @@ router.get('/', (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
+    .then(postData => {
+      const posts = postData.map(post => post.get({ plain: true }));
 
       res.render('homepage', {
         posts,
@@ -46,15 +42,15 @@ router.get('/', (req, res) => {
 
 // get single post
 router.get('/post/:id', (req, res) => {
-  console.log("HR============= 2")
   Post.findOne({
     where: {
       id: req.params.id
     },
     attributes: [
       'id',
-      'post_url',
       'title',
+      'content',
+      'user_id',
       'created_at'
     ],
     include: [
@@ -72,33 +68,31 @@ router.get('/post/:id', (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this id' });
-        return;
+    .then(postData => {
+      if (!postData) {
+        res.status(404).json({ message: 'No post found with this id' })
+        return
       }
 
-      const post = dbPostData.get({ plain: true });
+      const post = postData.get({ plain: true });
 
       res.render('single-post', {
         post,
         loggedIn: req.session.loggedIn
-      });
+      })
     })
     .catch(err => {
       console.log(err);
-      res.status(500).json(err);
-    });
-});
+      res.status(500).json(err)
+    })
+})
 
 router.get('/login', (req, res) => {
-  console.log("HR============= 3")
   if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
+    res.redirect('/')
+    return
   }
-
-  res.render('login');
-});
+  res.render('login')
+})
 
 module.exports = router;
