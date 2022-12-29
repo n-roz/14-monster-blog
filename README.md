@@ -86,14 +86,14 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ```
 
 ## Dependencies
-npm i express
-npm i express-session connect-session-sequelize
-https://www.npmjs.com/package/express-handlebars
-https://www.npmjs.com/package/mysql2
-https://sequelize.org/docs/v6/getting-started/
-https://www.npmjs.com/package/dotenv
-https://www.npmjs.com/package/bcrypt
-https://www.npmjs.com/package/express-session
-https://www.npmjs.com/package/connect-session-sequelize
+npm i 
+
+[Express-Handlebars](https://www.npmjs.com/package/express-handlebars)
+[MySQL](https://www.npmjs.com/package/mysql2)
+[Sequelize](https://sequelize.org/docs/v6/getting-started/)
+[Dotenv](https://www.npmjs.com/package/dotenv)
+[Bcrypt](https://www.npmjs.com/package/bcrypt)
+[Express-Session](https://www.npmjs.com/package/express-session)
+[Connect-Session-Squelize](https://www.npmjs.com/package/connect-session-sequelize)
 
 http://localhost:3001/
