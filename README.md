@@ -145,5 +145,5 @@ With error code H10 from Heroku, I have tried solving the problem with a .env fi
 
 ![Alt text](assets/error3.png "Error 3")
 
-I am not expecting a spectacular grade or even a passing one but I would be very greatful for partial credit. Please have mercy on me. Thank you so much.
+I am not expecting a spectacular grade or even a passing one but I would be very grateful for partial credit. Please have mercy on me. Thank you so much.
 
