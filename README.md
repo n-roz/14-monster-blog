@@ -119,7 +119,7 @@ No - Application must be deployed to Heroku.
 
 Deployment: 32%
 [I tried](https://warm-plains-85765.herokuapp.com/) and [I tried again](https://n-roz.github.io/14-monster-blog/) - Application deployed at live URL.
-Yes, if it would deploy - Application loads with no errors.
+Yes, when deployed locally. No otherwise - Application loads with no errors.
 Yes - Application GitHub URL submitted.
 Yes - GitHub repository contains application code.
 
@@ -132,7 +132,7 @@ Repository Quality: 13%
 Yes - Repository has a unique name.
 Yes - Repository follows best practices for file structure and naming conventions.
 Yes - Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-Some but could be more - Repository contains multiple descriptive commit messages.
+Yes - Repository contains multiple descriptive commit messages.
 Yes - Repository contains quality README file with description, screenshot, and link to deployed application.
 ```
 
