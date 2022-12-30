@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Set up the project. You’ll build off of the previous project by creating new GitHub issues and adding a style sheet. Set up the template engine. You’ll install Handlebars and configure Express to use it as its template engine. Create the homepage template. You’ll create a Handlebars template for the homepage, populated with dummy data. Populate the template with Sequelize data. You’ll use a previously defined Sequelize query to populate the homepage with real data.",
   "main": "server.js",
-  "engines": {
-    "node": "12.11.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node seeds/index.js", 
