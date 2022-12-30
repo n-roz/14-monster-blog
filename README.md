@@ -142,6 +142,7 @@ Below is a screenshot of my latest ```heroku logs --tail```.
 ![Alt text](assets/error4.png "Error 4")
 
 With error code H10 from Heroku, I have tried solving the problem with a .env file, a Procfile, and adding this to my package.json.
+
 ![Alt text](assets/error3.png "Error 3")
 
 I am not expecting a spectacular grade or even a passing one but I would be very greatful for partial credit. Please have mercy on me. Thank you so much.
