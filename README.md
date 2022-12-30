@@ -1,9 +1,12 @@
 # Model-View-Controller (MVC) Challenge: Tech Blog
 
+## Description
+
+[Unsuccessful deployment #1](https://warm-plains-85765.herokuapp.com/) and [unsuccessful deployment #2.](https://n-roz.github.io/14-monster-blog/) 
+
 ```
 Your challenge this week is to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. You’ll build this site completely from scratch and deploy it to Heroku. Your app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 ```
-
 
 ```
 MVC is a popular software-design pattern that organizes your app into the three following separate concerns:
@@ -85,8 +88,14 @@ WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
 
-## Dependencies
-npm i 
+## Mockup
+![Alt text](assets/deployed2.png "Deployed 2")
+![Alt text](assets/deployed3.png "Deployed 3")
+![Alt text](assets/deployed1.png "Deployed 1")
+![Alt text](assets/deployed4.png "Deployed 4")
+
+## Installation
+Use ```npm i``` after cloning the project. Initialize the application with ```node server.js```.
 
 - [Express-Handlebars](https://www.npmjs.com/package/express-handlebars)
 - [MySQL](https://www.npmjs.com/package/mysql2)
@@ -96,4 +105,44 @@ npm i
 - [Express-Session](https://www.npmjs.com/package/express-session)
 - [Connect-Session-Squelize](https://www.npmjs.com/package/connect-session-sequelize)
 
-http://localhost:3001/
+You view the project locally at http://localhost:3001/.
+
+## Challenges
+Alrighty, so unfortunately I was unable to get this project to deploy. However the deadline is tonight. Therefore, I will be arguing my case for partial credit. I will complete this project after the deadline because I need it for my portfolio and I want to learn.
+
+```
+Technical Acceptance Criteria: 40%
+Satisfies all of the preceding acceptance criteria plus the following:
+Yes - Application’s folder structure follows the Model-View-Controller paradigm.
+Yes - Uses the express-handlebars Links to an external site.package to use Handlebars.js for your Views.
+No - Application must be deployed to Heroku.
+
+Deployment: 32%
+[I tried](https://warm-plains-85765.herokuapp.com/) and [I tried again](https://n-roz.github.io/14-monster-blog/) - Application deployed at live URL.
+Yes, if it would deploy - Application loads with no errors.
+Yes - Application GitHub URL submitted.
+Yes - GitHub repository contains application code.
+
+Application Quality: 15%
+Yes - User experience is intuitive and easy to navigate.
+Yes - User interface style is clean and polished.
+Yes - Application resembles the mock-up functionality provided in the Challenge instructions.
+
+Repository Quality: 13%
+Yes - Repository has a unique name.
+Yes - Repository follows best practices for file structure and naming conventions.
+Yes - Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+Some but could be more - Repository contains multiple descriptive commit messages.
+Yes - Repository contains quality README file with description, screenshot, and link to deployed application.
+```
+
+What exactly is the solution? I am not sure. [Heroku says it is a crashed web dyno or a boot timeout on the web dyno will present this error.](https://devcenter.heroku.com/articles/error-codes#h10-app-crashed)
+
+Below is a screenshot of my latest ```heroku logs --tail```. 
+![Alt text](assets/error4.png "Error 4")
+
+With error code H10 from Heroku, I have tried solving the problem with a .env file, a Procfile, and adding this to my package.json.
+![Alt text](assets/error3.png "Error 3")
+
+I am not expecting a spectacular grade or even a passing one but I would be very greatful for partial credit. Please have mercy on me. Thank you so much.
+
